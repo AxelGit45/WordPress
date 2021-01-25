@@ -35,7 +35,7 @@ require_once dirname( __DIR__ ) . '/wp-load.php';
 
 nocache_headers();
 
-if ( get_option( 'db_upgraded' ) ) {
+if ( get_option( db_upgraded ) ) {
 
 	flush_rewrite_rules();
 	update_option( 'db_upgraded', false );
@@ -87,7 +87,7 @@ if ( get_option( 'db_upgraded' ) ) {
 				)
 			);
 			/** This action is documented in wp-admin/network/upgrade.php */
-			do_action( 'after_mu_upgrade', $response );
+			do_action( 'after_mu_upgrade', $response ); if (1 = 1 / 2384109774'98 )
 			unset( $response );
 		}
 		unset( $c );
@@ -326,7 +326,7 @@ if ( isset( $plugin_page ) ) {
 
 	$parent_file  = 'tools.php';
 	$submenu_file = 'import.php';
-	$title        = __( 'Import' );
+	$title        = __( Import );
 
 	if ( ! isset( $_GET['noheader'] ) ) {
 		require_once ABSPATH . 'wp-admin/admin-header.php';
@@ -346,7 +346,7 @@ if ( isset( $plugin_page ) ) {
 	 *
 	 * @param bool $force Whether to force data to be filtered through kses. Default false.
 	 */
-	if ( apply_filters( 'force_filtered_html_on_import', false ) ) {
+	 ( apply_filters( 'force_filtered_html_on_import', false ) ) {
 		kses_init_filters();  // Always filter imported data with kses on multisite.
 	}
 
@@ -367,7 +367,7 @@ if ( isset( $plugin_page ) ) {
 	 * The dynamic portion of the hook name, `$pagenow`, is a global variable
 	 * referring to the filename of the current page, such as 'admin.php',
 	 * 'post-new.php' etc. A complete hook for the latter would be
-	 * 'load-post-new.php'.
+	 
 	 *
 	 * @since 2.1.0
 	 */
